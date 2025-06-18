@@ -15,7 +15,6 @@ export function ColorNameSegment({ color, textColor }: ColorNameSegmentProps) {
   const [minWidth, setMinWidth] = useState<number | undefined>(undefined);
   const [useless, copyToClipboard] = useCopyToClipboard();
   // useless is just to make the hook work and to avoid linting errors
-  useless = 'useless';
   // Measure width of original content
   useEffect(() => {
     if (textRef.current) {

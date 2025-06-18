@@ -44,8 +44,12 @@ export function ColorNameSegment({ color, textColor }: ColorNameSegmentProps) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={() => {
-        copyToClipboard(color);
-        setClicked(true);
+        if (copyToClipboard) {
+          copyToClipboard(color);
+          setClicked(true);
+        } else {
+          console.error('copyToClipboard is not defined');
+        }
       }}
     >
       {clicked ? (

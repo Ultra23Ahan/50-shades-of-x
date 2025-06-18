@@ -1,5 +1,6 @@
 'use client';
 import * as React from 'react';
+
 function oldSchoolCopy(text: string) {
   const tempTextArea = document.createElement('textarea');
   tempTextArea.value = text;
@@ -9,20 +10,20 @@ function oldSchoolCopy(text: string) {
   document.body.removeChild(tempTextArea);
 }
 
-export function useCopyToClipboard() {
-  const [state, setState] = React.useState(null);
+export function useCopyToClipboard(): [string | null, (value: string) => void] {
+  const [state, setState] = React.useState<string | null>(null);
 
-  const copyToClipboard = React.useCallback((value) => {
+  const copyToClipboard = React.useCallback((value: string) => {
     const handleCopy = async () => {
       try {
         if (navigator?.clipboard?.writeText) {
           await navigator.clipboard.writeText(value);
           setState(value);
         } else {
-          throw new Error('writeText not supported');
+          throw new Error('navigator.clipboard.writeText not supported');
         }
       } catch (e) {
-        console.error(e)
+        console.error(e);
         oldSchoolCopy(value);
         setState(value);
       }

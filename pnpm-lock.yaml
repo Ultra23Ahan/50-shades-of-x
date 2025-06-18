@@ -17,9 +17,6 @@ importers:
       color-name-list:
         specifier: ^11.23.0
         version: 11.23.0
-      culori:
-        specifier: ^4.0.1
-        version: 4.0.1
       lucide-react:
         specifier: ^0.515.0
         version: 0.515.0(react@19.1.0)
@@ -63,6 +60,9 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.1.6(@types/react@19.1.8)
+      culori:
+        specifier: ^4.0.1
+        version: 4.0.1
       eslint:
         specifier: ^9
         version: 9.29.0(jiti@2.4.2)

@@ -1,12 +1,14 @@
 import nearestColor from 'nearest-color';
-import {colornames} from 'color-name-list';
+import { colornames } from 'color-name-list';
 
-const colorMap = colornames.reduce(
+const typedColornames = colornames as { name: string; hex: string }[];
+
+const colorMap = typedColornames.reduce<Record<string, string>>(
   (acc, { name, hex }) => {
     acc[name] = hex;
     return acc;
   },
-  {} as Record<string, string>,
+  {},
 );
 
 const nearest = nearestColor.from(colorMap);

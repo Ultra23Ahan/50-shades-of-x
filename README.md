@@ -9,7 +9,7 @@ shades of gray. So i made this!(because why not)
 
 ### Important points
 
-Supports css common color names like red, azure, lightyellow, goldenrod, etc.<
+Supports css common color names like red, azure, lightyellow, goldenrod, etc.
 Supports hex
 Supports rgb
 Supports hsl

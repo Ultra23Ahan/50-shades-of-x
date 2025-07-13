@@ -9,10 +9,13 @@ shades of gray. So i made this!(because why not)
 
 ### Important points
 
-Supports css common color names like red, azure, lightyellow, goldenrod, etc.
-Supports hex
-Supports rgb
-Supports hsl
+- Supports css common color names like red, azure, lightyellow, goldenrod, etc.
+
+- Supports hex
+
+- Supports rgb
+
+- Supports hsl
 (sorry no olkch but maybe later?)
 
 Scroll up to see lighter shades, and scroll down to see the lighter shades of the color you inputted.
